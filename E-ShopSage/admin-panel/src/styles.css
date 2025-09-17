@@ -1,0 +1,7 @@
+/* Import all external CSS files */
+@import url('./css/bootstrap.min.css');
+@import url('./css/dataTables.bootstrap4.min.css');
+@import url('./css/daterangepicker.css');
+@import url('./css/select2.min.css');
+/* Import admin layout styles */
+@import url('./css/admin-layout.css'); 

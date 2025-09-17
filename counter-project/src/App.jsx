@@ -5,31 +5,32 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [random, setRandom] = useState(0);
+  const [list, setList] = useState(['item1', 'item2', 'item3']);
+  const AddValue =()=>{
+    setRandom(Math.floor(Math.random() * 9999));
+    if(count >= 0 && count <20)setCount(prev =>prev + 1)
 
+  }
+  const minusValue = ()=>{
+    if(count >= 1) setCount(prev => prev - 1)
+  }
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h2>Counter Value: {count} </h2>
+        <h2>Random Value: {random} </h2>
+        <button onClick={AddValue}>Add Value</button> &nbsp;
+        <button onClick={minusValue}>Decrease Value</button>
+        <hr />
+        <h2>List of Items</h2>
+        <ul>
+          {list.map((item, index)=>(
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
-
 export default App

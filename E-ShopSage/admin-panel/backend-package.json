@@ -1,0 +1,23 @@
+{
+  "name": "eshop-admin-backend",
+  "version": "1.0.0",
+  "description": "E-ShopSage Admin Panel Backend API",
+  "main": "server-with-controller.js",
+  "scripts": {
+    "start": "node server-with-controller.js",
+    "dev": "nodemon server-with-controller.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["admin", "api", "nodejs", "express"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+} 
