@@ -25,7 +25,7 @@ function App() {
       pass += str.charAt(char);
     }
     setPassword(pass);
-  }, [length, number, character])
+  }, [length, number, character, setPassword])
   
   useEffect(()=>{
     passwordGenerator();
